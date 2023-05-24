@@ -1,18 +1,28 @@
-import Task from './Task';
+import React from 'react';
+import { useState } from 'react';
 function App() {
-  const tasks = [
-    'Lavar o carro',
-    'Ir no mercado',
-    'Buscar o cachorro no petshop'
-  ]
-  return <>
-  <h1>To do List</h1>
-  {tasks.map((value) => {
-    return <p><Task text={value}/></p>;
-  })}
-  
-  </>
-  ;
+  return <div className="container-fluid">
+    <div className="row">
+      <div className="col-3">
+        <div className="form-group">
+          <label>E-mail</label>
+            <input  className='form-control' type="text"/>
+        </div>
+
+        <div className="form-group">
+          <label>Password</label>
+            <input className='form-control' type="password"/>
+            
+        </div>
+
+        <div className="form-group mt-4">
+            <button className="btn btn-primary">Login</button>
+        </div>
+        
+      </div>
+  </div>
+
+  </div>
 }
 
 export default App;
